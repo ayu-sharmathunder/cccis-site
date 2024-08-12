@@ -20,6 +20,8 @@
 					scrt2URL: 'https://cccis--scvdevpro.sandbox.my.salesforce-scrt.com'
 				}
 			);
+
+			embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Origin_URL" : window.location.origin});
 		} catch (err) {
 			console.error('Error loading Embedded Messaging: ', err);
 		}
