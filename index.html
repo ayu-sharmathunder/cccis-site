@@ -6,6 +6,7 @@
   <body>
     <h1>CCCIS-Thunder Test Site</h1>
 	<script type='text/javascript'>
+		localStorage['parentSiteUrl'] = window.location.origin;
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
@@ -18,7 +19,6 @@
 					scrt2URL: 'https://cccis--scvdevpro.sandbox.my.salesforce-scrt.com'
 				}
 			);
-			embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Origin_URL" : window.location.origin});
 		} catch (err) {
 			console.error('Error loading Embedded Messaging: ', err);
 		}
