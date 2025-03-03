@@ -4,36 +4,26 @@
   </head>
   
   <body style="background-color: antiquewhite;">
+	  This is updated page.
     <h1 style="text-align: center; margin-top: 109px; font-size: 58px; font-family: monospace; color: purple;" >CCCIS-Thunder Test Site</h1>
 	<script type='text/javascript'>
-		localStorage['parentSiteUrl'] = window.location.origin;
-		console.log( 'on github',window.location.origin );
-		window.addEventListener("onEmbeddedMessagingReady", () => {
-		    console.log("Received the onEmbeddedMessagingReady event…");
-		
-		    // Send data to Salesforce
-		    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Origin_URL" : window.location.origin});
+    function initEmbeddedMessaging() {
+        try {
+            embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-			
-		});
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00DWG000000ZhoT',
-				'CCC_Virtual_Assistant',
-				'https://cccis--scvdevpro.sandbox.my.site.com/ESWCCCISChatBot1721672430488',
-				{
-					scrt2URL: 'https://cccis--scvdevpro.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
+            embeddedservice_bootstrap.init(
+                '00D8N0000008hXw',
+                'MIAW',
+                'https://jamesavery--sfscqa.sandbox.my.site.com/ESWMIAW1740981906507',
+                {
+                    scrt2URL: 'https://jamesavery--sfscqa.sandbox.my.salesforce-scrt.com'
+                }
+            );
+        } catch (err) {
+            console.error('Error loading Embedded Messaging: ', err);
+        }
+    };
 </script>
-<script type='text/javascript' src='https://cccis--scvdevpro.sandbox.my.site.com/ESWCCCISChatBot1721672430488/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
+<script type='text/javascript' src='https://jamesavery--sfscqa.sandbox.my.site.com/ESWMIAW1740981906507/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
   </body>
 </html>
